@@ -1,0 +1,342 @@
+
+    <form class="d-flex flex-column align-items-center needs-validation" novalidate="" id="psc-form" autocomplete="off">
+        <input type="hidden" id="psc-language-code-input" name="Language">
+        <div id="psc-widget-top-pane" class="w-100 calc-widgit-top-pane d-flex flex-column align-items-center widget-top-pane" style="background: linear-gradient(#343540 0%, #242831 100%); color: white; border-bottom: none;">
+            <a class="calc-popup-icon" title="Position size and risk calculator" href="/en/widgets/position-size-calculator" target="_blank"><i class="mdi mdi-open-in-new" style=" color: white"></i></a>
+            <div class="flex-column d-flex form-input-container">
+                <div class="d-flex flex-row flex-wrap calculator-input-line">
+                    <div class="form-group" id="psc-symbol-select-group">
+                        <div>
+                            <label for="pscSymbolsControlSelect">Instrument</label>
+                            <div class="dropdown bootstrap-select form-control frn-override widget-input-override instrument-select"><select onchange="OnPSCSymbolChanged()" name="pscSymbolsControlSelect" class="selectpicker form-control frn-override widget-input-override instrument-select" id="pscSymbolsControlSelect" data-live-search="true" data-size="6" data-style="form-control frn-override widget-input-override" tabindex="-98">
+                                    <option value="AAVEUSD" data-tokens="AAVEUSDAave" data-subtext="Aave" is-tv-symbol="is-tv-symbol">AAVEUSD</option>
+                                    <option value="ADAUSD" data-tokens="ADAUSDCardano / US Dollar" data-subtext="Cardano / US Dollar" is-tv-symbol="is-tv-symbol">ADAUSD</option>
+                                    <option value="ATOMUSD" data-tokens="ATOMUSDCosmos" data-subtext="Cosmos" is-tv-symbol="is-tv-symbol">ATOMUSD</option>
+                                    <option value="AUDCAD" data-tokens="AUDCADAustralian Dollar / Canadian Dollar" data-subtext="Australian Dollar / Canadian Dollar" is-tv-symbol="is-tv-symbol">AUDCAD</option>
+                                    <option value="AUDCHF" data-tokens="AUDCHFAustralian Dollar / Swiss Franc" data-subtext="Australian Dollar / Swiss Franc" is-tv-symbol="is-tv-symbol">AUDCHF</option>
+                                    <option value="AUDJPY" data-tokens="AUDJPYAustralian Dollar / Japanese Yen" data-subtext="Australian Dollar / Japanese Yen" is-tv-symbol="is-tv-symbol">AUDJPY</option>
+                                    <option value="AUDNOK" data-tokens="AUDNOKAustralian Dollar / Norwegian Krone" data-subtext="Australian Dollar / Norwegian Krone" is-tv-symbol="is-tv-symbol">AUDNOK</option>
+                                    <option value="AUDNZD" data-tokens="AUDNZDAustralian Dollar / New Zealand Dollar" data-subtext="Australian Dollar / New Zealand Dollar" is-tv-symbol="is-tv-symbol">AUDNZD</option>
+                                    <option value="AUDPLN" data-tokens="AUDPLNAustralian Dollar / Polish Zloty" data-subtext="Australian Dollar / Polish Zloty" is-tv-symbol="is-tv-symbol">AUDPLN</option>
+                                    <option value="AUDSEK" data-tokens="AUDSEKAustralian Dollar / Swedish Krona" data-subtext="Australian Dollar / Swedish Krona" is-tv-symbol="is-tv-symbol">AUDSEK</option>
+                                    <option value="AUDSGD" data-tokens="AUDSGDAustralian Dollar / Singapore Dollar" data-subtext="Australian Dollar / Singapore Dollar" is-tv-symbol="is-tv-symbol">AUDSGD</option>
+                                    <option value="AUDUSD" data-tokens="AUDUSDAustralian Dollar / US Dollar" data-subtext="Australian Dollar / US Dollar" is-tv-symbol="is-tv-symbol">AUDUSD</option>
+                                    <option value="AUS200" data-tokens="AUS200S&amp;P/ASX200 Index" data-subtext="S&amp;P/ASX200 Index" is-tv-symbol="is-tv-symbol">AUS200</option>
+                                    <option value="AVAXUSD" data-tokens="AVAXUSDAvalanche" data-subtext="Avalanche" is-tv-symbol="is-tv-symbol">AVAXUSD</option>
+                                    <option value="BCHUSD" data-tokens="BCHUSDBitcoin Cash / US Dollar" data-subtext="Bitcoin Cash / US Dollar" is-tv-symbol="is-tv-symbol">BCHUSD</option>
+                                    <option value="BNBUSD" data-tokens="BNBUSDBinance Coin / US Dollar" data-subtext="Binance Coin / US Dollar" is-tv-symbol="is-tv-symbol">BNBUSD</option>
+                                    <option value="BSVUSD" data-tokens="BSVUSDBitcoin SV / US Dollar" data-subtext="Bitcoin SV / US Dollar" is-tv-symbol="is-tv-symbol">BSVUSD</option>
+                                    <option value="BTCEUR" data-tokens="BTCEURBitcoin / Euro" data-subtext="Bitcoin / Euro" is-tv-symbol="is-tv-symbol">BTCEUR</option>
+                                    <option value="BTCJPY" data-tokens="BTCJPYBitcoin / Japanese Yen" data-subtext="Bitcoin / Japanese Yen" is-tv-symbol="is-tv-symbol">BTCJPY</option>
+                                    <option value="BTCUSD" data-tokens="BTCUSDBitcoin / US Dollar" data-subtext="Bitcoin / US Dollar" is-tv-symbol="is-tv-symbol">BTCUSD</option>
+                                    <option value="CA60" data-tokens="CA60Canada S&amp;P/TSX 60 Index" data-subtext="Canada S&amp;P/TSX 60 Index" is-tv-symbol="is-tv-symbol">CA60</option>
+                                    <option value="CADCHF" data-tokens="CADCHFCanadian Dollar / Swiss Franc" data-subtext="Canadian Dollar / Swiss Franc" is-tv-symbol="is-tv-symbol">CADCHF</option>
+                                    <option value="CADJPY" data-tokens="CADJPYCanadian Dollar / Japanese Yen" data-subtext="Canadian Dollar / Japanese Yen" is-tv-symbol="is-tv-symbol">CADJPY</option>
+                                    <option value="CADSGD" data-tokens="CADSGDCanadian Dollar / Singapore Dollar" data-subtext="Canadian Dollar / Singapore Dollar" is-tv-symbol="is-tv-symbol">CADSGD</option>
+                                    <option value="CELUSD" data-tokens="CELUSDCelsius Network / US Dollar" data-subtext="Celsius Network / US Dollar" is-tv-symbol="is-tv-symbol">CELUSD</option>
+                                    <option value="CHFJPY" data-tokens="CHFJPYSwiss Franc / Japanese Yen" data-subtext="Swiss Franc / Japanese Yen" is-tv-symbol="is-tv-symbol">CHFJPY</option>
+                                    <option value="CHFSEK" data-tokens="CHFSEKSwiss Franc / Swedish Krona" data-subtext="Swiss Franc / Swedish Krona" is-tv-symbol="is-tv-symbol">CHFSEK</option>
+                                    <option value="CHFSGD" data-tokens="CHFSGDSwiss Franc / Singapore Dollar" data-subtext="Swiss Franc / Singapore Dollar" is-tv-symbol="is-tv-symbol">CHFSGD</option>
+                                    <option value="CHINA50" data-tokens="CHINA50FTSE China A50 Index" data-subtext="FTSE China A50 Index" is-tv-symbol="is-tv-symbol">CHINA50</option>
+                                    <option value="CHINAH" data-tokens="CHINAHChina H-Shares HSCEI Index" data-subtext="China H-Shares HSCEI Index" is-tv-symbol="is-tv-symbol">CHINAH</option>
+                                    <option value="COMPUSD" data-tokens="COMPUSDCompound" data-subtext="Compound" is-tv-symbol="is-tv-symbol">COMPUSD</option>
+                                    <option value="CROUSD" data-tokens="CROUSDCrypto.com Coin / US Dollar" data-subtext="Crypto.com Coin / US Dollar" is-tv-symbol="is-tv-symbol">CROUSD</option>
+                                    <option value="DAIUSD" data-tokens="DAIUSDDai / US Dollar" data-subtext="Dai / US Dollar" is-tv-symbol="is-tv-symbol">DAIUSD</option>
+                                    <option value="DOGEUSD" data-tokens="DOGEUSDDogecoin" data-subtext="Dogecoin" is-tv-symbol="is-tv-symbol">DOGEUSD</option>
+                                    <option value="DOTUSD" data-tokens="DOTUSDPolkadot / US Dollar" data-subtext="Polkadot / US Dollar" is-tv-symbol="is-tv-symbol">DOTUSD</option>
+                                    <option value="DSHUSD" data-tokens="DSHUSDDashcoin / US Dollar" data-subtext="Dashcoin / US Dollar" is-tv-symbol="is-tv-symbol">DSHUSD</option>
+                                    <option value="DXY" data-tokens="DXYU.S. Dollar Currency Index, USDX" data-subtext="U.S. Dollar Currency Index, USDX" is-tv-symbol="is-tv-symbol">DXY</option>
+                                    <option value="EGLDUSD" data-tokens="EGLDUSDElrond" data-subtext="Elrond" is-tv-symbol="is-tv-symbol">EGLDUSD</option>
+                                    <option value="EOSUSD" data-tokens="EOSUSDEOS / US Dollar" data-subtext="EOS / US Dollar" is-tv-symbol="is-tv-symbol">EOSUSD</option>
+                                    <option value="ES35" data-tokens="ES35 Spain IBEX 35 Index" data-subtext=" Spain IBEX 35 Index" is-tv-symbol="is-tv-symbol">ES35</option>
+                                    <option value="ETHUSD" data-tokens="ETHUSDEthereum / US Dollar" data-subtext="Ethereum / US Dollar" is-tv-symbol="is-tv-symbol">ETHUSD</option>
+                                    <option value="EURAUD" data-tokens="EURAUDEuro / Australian Dollar" data-subtext="Euro / Australian Dollar" is-tv-symbol="is-tv-symbol">EURAUD</option>
+                                    <option value="EURCAD" data-tokens="EURCADEuro / Canadian Dollar" data-subtext="Euro / Canadian Dollar" is-tv-symbol="is-tv-symbol">EURCAD</option>
+                                    <option value="EURCHF" data-tokens="EURCHFEuro / Swiss Franc" data-subtext="Euro / Swiss Franc" is-tv-symbol="is-tv-symbol">EURCHF</option>
+                                    <option value="EURCZK" data-tokens="EURCZKEuro / Czech Koruna" data-subtext="Euro / Czech Koruna" is-tv-symbol="is-tv-symbol">EURCZK</option>
+                                    <option value="EURDKK" data-tokens="EURDKKEuro / Danish Krone" data-subtext="Euro / Danish Krone" is-tv-symbol="is-tv-symbol">EURDKK</option>
+                                    <option value="EURGBP" data-tokens="EURGBPEuro / British Pound" data-subtext="Euro / British Pound" is-tv-symbol="is-tv-symbol">EURGBP</option>
+                                    <option value="EURHKD" data-tokens="EURHKDEuro / Hong Kong Dollar" data-subtext="Euro / Hong Kong Dollar" is-tv-symbol="is-tv-symbol">EURHKD</option>
+                                    <option value="EURHUF" data-tokens="EURHUFEuro / Hungarian Forint" data-subtext="Euro / Hungarian Forint" is-tv-symbol="is-tv-symbol">EURHUF</option>
+                                    <option value="EURJPY" data-tokens="EURJPYEuro / Japanese Yen" data-subtext="Euro / Japanese Yen" is-tv-symbol="is-tv-symbol">EURJPY</option>
+                                    <option value="EURMXN" data-tokens="EURMXNEuro / Mexican Peso" data-subtext="Euro / Mexican Peso" is-tv-symbol="is-tv-symbol">EURMXN</option>
+                                    <option value="EURNOK" data-tokens="EURNOKEuro / Norwegian Krone" data-subtext="Euro / Norwegian Krone" is-tv-symbol="is-tv-symbol">EURNOK</option>
+                                    <option value="EURNZD" data-tokens="EURNZDEuro / New Zealand Dollar" data-subtext="Euro / New Zealand Dollar" is-tv-symbol="is-tv-symbol">EURNZD</option>
+                                    <option value="EURPLN" data-tokens="EURPLNEuro / Polish Zloty" data-subtext="Euro / Polish Zloty" is-tv-symbol="is-tv-symbol">EURPLN</option>
+                                    <option value="EURRON" data-tokens="EURRONEuro / Romanian Leu" data-subtext="Euro / Romanian Leu" is-tv-symbol="is-tv-symbol">EURRON</option>
+                                    <option value="EURRUB" data-tokens="EURRUBEuro / Russian Ruble" data-subtext="Euro / Russian Ruble" is-tv-symbol="is-tv-symbol">EURRUB</option>
+                                    <option value="EURSEK" data-tokens="EURSEKEuro / Swedish Krona" data-subtext="Euro / Swedish Krona" is-tv-symbol="is-tv-symbol">EURSEK</option>
+                                    <option value="EURSGD" data-tokens="EURSGDEuro / Singapore Dollar" data-subtext="Euro / Singapore Dollar" is-tv-symbol="is-tv-symbol">EURSGD</option>
+                                    <option value="EURTRY" data-tokens="EURTRYEuro / Turkish Lira" data-subtext="Euro / Turkish Lira" is-tv-symbol="is-tv-symbol">EURTRY</option>
+                                    <option value="EURUSD" data-tokens="EURUSDEuro / US Dollar" data-subtext="Euro / US Dollar" is-tv-symbol="is-tv-symbol">EURUSD</option>
+                                    <option value="EURZAR" data-tokens="EURZAREuro / South African Rand" data-subtext="Euro / South African Rand" is-tv-symbol="is-tv-symbol">EURZAR</option>
+                                    <option value="FILUSD" data-tokens="FILUSDFilecoin / US Dollar" data-subtext="Filecoin / US Dollar" is-tv-symbol="is-tv-symbol">FILUSD</option>
+                                    <option value="FRA40" data-tokens="FRA40France CAC40 Index, F40" data-subtext="France CAC40 Index, F40" is-tv-symbol="is-tv-symbol">FRA40</option>
+                                    <option value="FTTUSD" data-tokens="FTTUSDFreeTip / US Dollar" data-subtext="FreeTip / US Dollar" is-tv-symbol="is-tv-symbol">FTTUSD</option>
+                                    <option value="GBPAUD" data-tokens="GBPAUDBritish Pound / Australian Dollar" data-subtext="British Pound / Australian Dollar" is-tv-symbol="is-tv-symbol">GBPAUD</option>
+                                    <option value="GBPCAD" data-tokens="GBPCADBritish Pound / Canadian Dollar" data-subtext="British Pound / Canadian Dollar" is-tv-symbol="is-tv-symbol">GBPCAD</option>
+                                    <option value="GBPCHF" data-tokens="GBPCHFBritish Pound / Swiss Franc" data-subtext="British Pound / Swiss Franc" is-tv-symbol="is-tv-symbol">GBPCHF</option>
+                                    <option value="GBPCZK" data-tokens="GBPCZKBritish Pound / Czech Koruna" data-subtext="British Pound / Czech Koruna" is-tv-symbol="is-tv-symbol">GBPCZK</option>
+                                    <option value="GBPDKK" data-tokens="GBPDKKBritish Pound / Danish Krone" data-subtext="British Pound / Danish Krone" is-tv-symbol="is-tv-symbol">GBPDKK</option>
+                                    <option value="GBPHKD" data-tokens="GBPHKDBritish Pound / Hong Kong Dollar" data-subtext="British Pound / Hong Kong Dollar" is-tv-symbol="is-tv-symbol">GBPHKD</option>
+                                    <option value="GBPHUF" data-tokens="GBPHUFBritish Pound / Hungarian Forint" data-subtext="British Pound / Hungarian Forint" is-tv-symbol="is-tv-symbol">GBPHUF</option>
+                                    <option value="GBPJPY" data-tokens="GBPJPYBritish Pound / Japanese Yen" data-subtext="British Pound / Japanese Yen" is-tv-symbol="is-tv-symbol">GBPJPY</option>
+                                    <option value="GBPMXN" data-tokens="GBPMXNBritish Pound / Mexican Peso" data-subtext="British Pound / Mexican Peso" is-tv-symbol="is-tv-symbol">GBPMXN</option>
+                                    <option value="GBPNOK" data-tokens="GBPNOKBritish Pound / Norwegian Krone" data-subtext="British Pound / Norwegian Krone" is-tv-symbol="is-tv-symbol">GBPNOK</option>
+                                    <option value="GBPNZD" data-tokens="GBPNZDBritish Pound / New Zealand Dollar" data-subtext="British Pound / New Zealand Dollar" is-tv-symbol="is-tv-symbol">GBPNZD</option>
+                                    <option value="GBPPLN" data-tokens="GBPPLNBritish Pound / Polish Zloty" data-subtext="British Pound / Polish Zloty" is-tv-symbol="is-tv-symbol">GBPPLN</option>
+                                    <option value="GBPSEK" data-tokens="GBPSEKBritish Pound / Swedish Krona" data-subtext="British Pound / Swedish Krona" is-tv-symbol="is-tv-symbol">GBPSEK</option>
+                                    <option value="GBPSGD" data-tokens="GBPSGDBritish Pound / Singapore Dollar" data-subtext="British Pound / Singapore Dollar" is-tv-symbol="is-tv-symbol">GBPSGD</option>
+                                    <option value="GBPTRY" data-tokens="GBPTRYBritish Pound / Turkish Lira" data-subtext="British Pound / Turkish Lira" is-tv-symbol="is-tv-symbol">GBPTRY</option>
+                                    <option value="GBPUSD" data-tokens="GBPUSDBritish Pound / US Dollar" data-subtext="British Pound / US Dollar" is-tv-symbol="is-tv-symbol">GBPUSD</option>
+                                    <option value="GBPZAR" data-tokens="GBPZARBritish Pound / South African Rand" data-subtext="British Pound / South African Rand" is-tv-symbol="is-tv-symbol">GBPZAR</option>
+                                    <option value="GER40" data-tokens="GER40DAX40 Index, DE40, GER30" data-subtext="DAX40 Index, DE40, GER30" is-tv-symbol="is-tv-symbol">GER40</option>
+                                    <option value="HK50" data-tokens="HK50Hong Kong Hang Seng Index" data-subtext="Hong Kong Hang Seng Index" is-tv-symbol="is-tv-symbol">HK50</option>
+                                    <option value="HTUSD" data-tokens="HTUSDHuobi Token" data-subtext="Huobi Token" is-tv-symbol="is-tv-symbol">HTUSD</option>
+                                    <option value="IOTAUSD" data-tokens="IOTAUSDIOTA" data-subtext="IOTA" is-tv-symbol="is-tv-symbol">IOTAUSD</option>
+                                    <option value="IT40" data-tokens="IT40FTSE MIB Italy 40 Index" data-subtext="FTSE MIB Italy 40 Index" is-tv-symbol="is-tv-symbol">IT40</option>
+                                    <option value="JPN225" data-tokens="JPN225Nikkei 225 Index, JP225" data-subtext="Nikkei 225 Index, JP225" is-tv-symbol="is-tv-symbol">JPN225</option>
+                                    <option value="LEOUSD" data-tokens="LEOUSDLEO Token / US Dollar" data-subtext="LEO Token / US Dollar" is-tv-symbol="is-tv-symbol">LEOUSD</option>
+                                    <option value="LINKUSD" data-tokens="LINKUSDChainlink" data-subtext="Chainlink" is-tv-symbol="is-tv-symbol">LINKUSD</option>
+                                    <option value="LTCUSD" data-tokens="LTCUSDLitecoin / US Dollar" data-subtext="Litecoin / US Dollar" is-tv-symbol="is-tv-symbol">LTCUSD</option>
+                                    <option value="LUNAUSD" data-tokens="LUNAUSDTerra" data-subtext="Terra" is-tv-symbol="is-tv-symbol">LUNAUSD</option>
+                                    <option value="MKRUSD" data-tokens="MKRUSDMaker / US Dollar" data-subtext="Maker / US Dollar" is-tv-symbol="is-tv-symbol">MKRUSD</option>
+                                    <option value="NEOUSD" data-tokens="NEOUSDNEO / US Dollar" data-subtext="NEO / US Dollar" is-tv-symbol="is-tv-symbol">NEOUSD</option>
+                                    <option value="NETH25" data-tokens="NETH25Netherlands AEX 25 Index" data-subtext="Netherlands AEX 25 Index" is-tv-symbol="is-tv-symbol">NETH25</option>
+                                    <option value="NOKJPY" data-tokens="NOKJPYNorwegian Krone / Japanese Yen" data-subtext="Norwegian Krone / Japanese Yen" is-tv-symbol="is-tv-symbol">NOKJPY</option>
+                                    <option value="NOKSEK" data-tokens="NOKSEKNorwegian Krone / Swedish Krona" data-subtext="Norwegian Krone / Swedish Krona" is-tv-symbol="is-tv-symbol">NOKSEK</option>
+                                    <option value="NZDCAD" data-tokens="NZDCADNew Zealand Dollar / Canadian Dollar" data-subtext="New Zealand Dollar / Canadian Dollar" is-tv-symbol="is-tv-symbol">NZDCAD</option>
+                                    <option value="NZDCHF" data-tokens="NZDCHFNew Zealand Dollar / Swiss Franc" data-subtext="New Zealand Dollar / Swiss Franc" is-tv-symbol="is-tv-symbol">NZDCHF</option>
+                                    <option value="NZDJPY" data-tokens="NZDJPYNew Zealand Dollar / Japanese Yen" data-subtext="New Zealand Dollar / Japanese Yen" is-tv-symbol="is-tv-symbol">NZDJPY</option>
+                                    <option value="NZDSGD" data-tokens="NZDSGDNew Zealand Dollar / Singapore Dollar" data-subtext="New Zealand Dollar / Singapore Dollar" is-tv-symbol="is-tv-symbol">NZDSGD</option>
+                                    <option value="NZDUSD" data-tokens="NZDUSDNew Zealand Dollar / US Dollar" data-subtext="New Zealand Dollar / US Dollar" is-tv-symbol="is-tv-symbol">NZDUSD</option>
+                                    <option value="OKBUSD" data-tokens="OKBUSDOKB / US Dollar" data-subtext="OKB / US Dollar" is-tv-symbol="is-tv-symbol">OKBUSD</option>
+                                    <option value="SEKJPY" data-tokens="SEKJPYSwedish Krona / Japanese Yen" data-subtext="Swedish Krona / Japanese Yen" is-tv-symbol="is-tv-symbol">SEKJPY</option>
+                                    <option value="SGDJPY" data-tokens="SGDJPYSingapore Dollar / Japanese Yen" data-subtext="Singapore Dollar / Japanese Yen" is-tv-symbol="is-tv-symbol">SGDJPY</option>
+                                    <option value="SHIBUSD" data-tokens="SHIBUSDShiba Inu" data-subtext="Shiba Inu" is-tv-symbol="is-tv-symbol">SHIBUSD</option>
+                                    <option value="SNXUSD" data-tokens="SNXUSDSynthetix Network Token / US Dollar" data-subtext="Synthetix Network Token / US Dollar" is-tv-symbol="is-tv-symbol">SNXUSD</option>
+                                    <option value="SOLUSD" data-tokens="SOLUSDSolana / US Dollar" data-subtext="Solana / US Dollar" is-tv-symbol="is-tv-symbol">SOLUSD</option>
+                                    <option value="STOXX50" data-tokens="STOXX50EU 50 Index" data-subtext="EU 50 Index" is-tv-symbol="is-tv-symbol">STOXX50</option>
+                                    <option value="SUSHIUSD" data-tokens="SUSHIUSDSushi" data-subtext="Sushi" is-tv-symbol="is-tv-symbol">SUSHIUSD</option>
+                                    <option value="SWI20" data-tokens="SWI20Swiss 20 Index, SMI" data-subtext="Swiss 20 Index, SMI" is-tv-symbol="is-tv-symbol">SWI20</option>
+                                    <option value="THETAUSD" data-tokens="THETAUSDTheta Network" data-subtext="Theta Network" is-tv-symbol="is-tv-symbol">THETAUSD</option>
+                                    <option value="TRXUSD" data-tokens="TRXUSDTRON / US Dollar" data-subtext="TRON / US Dollar" is-tv-symbol="is-tv-symbol">TRXUSD</option>
+                                    <option value="TRYJPY" data-tokens="TRYJPYTurkish Lira / Japanese Yen" data-subtext="Turkish Lira / Japanese Yen" is-tv-symbol="is-tv-symbol">TRYJPY</option>
+                                    <option value="UK100" data-tokens="UK100FTSE 100 Index" data-subtext="FTSE 100 Index" is-tv-symbol="is-tv-symbol">UK100</option>
+                                    <option value="UNIUSD" data-tokens="UNIUSDUNICORN Token / US Dollar" data-subtext="UNICORN Token / US Dollar" is-tv-symbol="is-tv-symbol">UNIUSD</option>
+                                    <option value="US100" data-tokens="US100Nasdaq Index, NDX, NAS100, USTEC" data-subtext="Nasdaq Index, NDX, NAS100, USTEC" is-tv-symbol="is-tv-symbol">US100</option>
+                                    <option value="US2000" data-tokens="US2000US Russell 2000 Index" data-subtext="US Russell 2000 Index" is-tv-symbol="is-tv-symbol">US2000</option>
+                                    <option value="US30" data-tokens="US30Dow Jones Index, DJI, WS30" data-subtext="Dow Jones Index, DJI, WS30" is-tv-symbol="is-tv-symbol">US30</option>
+                                    <option value="US500" data-tokens="US500S&amp;P 500 Index, SPX500" data-subtext="S&amp;P 500 Index, SPX500" is-tv-symbol="is-tv-symbol">US500</option>
+                                    <option value="USDCAD" data-tokens="USDCADUS Dollar / Canadian Dollar" data-subtext="US Dollar / Canadian Dollar" is-tv-symbol="is-tv-symbol">USDCAD</option>
+                                    <option value="USDCHF" data-tokens="USDCHFUS Dollar / Swiss Franc" data-subtext="US Dollar / Swiss Franc" is-tv-symbol="is-tv-symbol">USDCHF</option>
+                                    <option value="USDCNH" data-tokens="USDCNHUS Dollar / Chinese Yuan" data-subtext="US Dollar / Chinese Yuan" is-tv-symbol="is-tv-symbol">USDCNH</option>
+                                    <option value="USDCNY" data-tokens="USDCNYUS Dollar / Chinese Yuan" data-subtext="US Dollar / Chinese Yuan" is-tv-symbol="is-tv-symbol">USDCNY</option>
+                                    <option value="USDCUSD" data-tokens="USDCUSDUSD Coin" data-subtext="USD Coin" is-tv-symbol="is-tv-symbol">USDCUSD</option>
+                                    <option value="USDCZK" data-tokens="USDCZKUS Dollar / Czech Koruna" data-subtext="US Dollar / Czech Koruna" is-tv-symbol="is-tv-symbol">USDCZK</option>
+                                    <option value="USDDKK" data-tokens="USDDKKUS Dollar / Danish Krone" data-subtext="US Dollar / Danish Krone" is-tv-symbol="is-tv-symbol">USDDKK</option>
+                                    <option value="USDHKD" data-tokens="USDHKDUS Dollar / Hong Kong Dollar" data-subtext="US Dollar / Hong Kong Dollar" is-tv-symbol="is-tv-symbol">USDHKD</option>
+                                    <option value="USDHUF" data-tokens="USDHUFUS Dollar / Hungarian Forint" data-subtext="US Dollar / Hungarian Forint" is-tv-symbol="is-tv-symbol">USDHUF</option>
+                                    <option value="USDILS" data-tokens="USDILSUS Dollar / Israeli New Shekel" data-subtext="US Dollar / Israeli New Shekel" is-tv-symbol="is-tv-symbol">USDILS</option>
+                                    <option value="USDINR" data-tokens="USDINRUS Dollar / Indian Rupee" data-subtext="US Dollar / Indian Rupee" is-tv-symbol="is-tv-symbol">USDINR</option>
+                                    <option value="USDJPY" data-tokens="USDJPYUS Dollar / Japanese Yen" data-subtext="US Dollar / Japanese Yen" is-tv-symbol="is-tv-symbol">USDJPY</option>
+                                    <option value="USDMXN" data-tokens="USDMXNUS Dollar / Mexican Peso" data-subtext="US Dollar / Mexican Peso" is-tv-symbol="is-tv-symbol">USDMXN</option>
+                                    <option value="USDNOK" data-tokens="USDNOKUS Dollar / Norwegian Krone" data-subtext="US Dollar / Norwegian Krone" is-tv-symbol="is-tv-symbol">USDNOK</option>
+                                    <option value="USDPLN" data-tokens="USDPLNUS Dollar / Polish Zloty" data-subtext="US Dollar / Polish Zloty" is-tv-symbol="is-tv-symbol">USDPLN</option>
+                                    <option value="USDRON" data-tokens="USDRONUS Dollar / Romanian Leu" data-subtext="US Dollar / Romanian Leu" is-tv-symbol="is-tv-symbol">USDRON</option>
+                                    <option value="USDRUB" data-tokens="USDRUBUS Dollar / Russian Ruble" data-subtext="US Dollar / Russian Ruble" is-tv-symbol="is-tv-symbol">USDRUB</option>
+                                    <option value="USDSEK" data-tokens="USDSEKUS Dollar / Swedish Krona" data-subtext="US Dollar / Swedish Krona" is-tv-symbol="is-tv-symbol">USDSEK</option>
+                                    <option value="USDSGD" data-tokens="USDSGDUS Dollar / Singapore Dollar" data-subtext="US Dollar / Singapore Dollar" is-tv-symbol="is-tv-symbol">USDSGD</option>
+                                    <option value="USDTHB" data-tokens="USDTHBUS Dollar / Thai Baht" data-subtext="US Dollar / Thai Baht" is-tv-symbol="is-tv-symbol">USDTHB</option>
+                                    <option value="USDTRY" data-tokens="USDTRYUS Dollar / Turkish Lira" data-subtext="US Dollar / Turkish Lira" is-tv-symbol="is-tv-symbol">USDTRY</option>
+                                    <option value="USDTUSD" data-tokens="USDTUSDTether" data-subtext="Tether" is-tv-symbol="is-tv-symbol">USDTUSD</option>
+                                    <option value="USDZAR" data-tokens="USDZARUS Dollar / South African Rand" data-subtext="US Dollar / South African Rand" is-tv-symbol="is-tv-symbol">USDZAR</option>
+                                    <option value="VETUSD" data-tokens="VETUSDVeChain / US Dollar" data-subtext="VeChain / US Dollar" is-tv-symbol="is-tv-symbol">VETUSD</option>
+                                    <option value="WBTCUSD" data-tokens="WBTCUSDWrapped Bitcoin" data-subtext="Wrapped Bitcoin" is-tv-symbol="is-tv-symbol">WBTCUSD</option>
+                                    <option value="Wheat" data-tokens="WheatWheat Cash Contract" data-subtext="Wheat Cash Contract" is-tv-symbol="is-tv-symbol">Wheat</option>
+                                    <option value="XAGAUD" data-tokens="XAGAUDSilver / Australian Dollar" data-subtext="Silver / Australian Dollar" is-tv-symbol="is-tv-symbol">XAGAUD</option>
+                                    <option value="XAGEUR" data-tokens="XAGEURSilver / Euro" data-subtext="Silver / Euro" is-tv-symbol="is-tv-symbol">XAGEUR</option>
+                                    <option value="XAGUSD" data-tokens="XAGUSDSilver / US Dollar" data-subtext="Silver / US Dollar" is-tv-symbol="is-tv-symbol">XAGUSD</option>
+                                    <option value="XAUAUD" data-tokens="XAUAUDGold / Australian Dollar" data-subtext="Gold / Australian Dollar" is-tv-symbol="is-tv-symbol">XAUAUD</option>
+                                    <option value="XAUCHF" data-tokens="XAUCHFGold / Swiss Franc" data-subtext="Gold / Swiss Franc" is-tv-symbol="is-tv-symbol">XAUCHF</option>
+                                    <option value="XAUEUR" data-tokens="XAUEURGold / Euro" data-subtext="Gold / Euro" is-tv-symbol="is-tv-symbol">XAUEUR</option>
+                                    <option value="XAUGBP" data-tokens="XAUGBPGold / British Pound" data-subtext="Gold / British Pound" is-tv-symbol="is-tv-symbol">XAUGBP</option>
+                                    <option value="XAUJPY" data-tokens="XAUJPYGold / Japanese Yen" data-subtext="Gold / Japanese Yen" is-tv-symbol="is-tv-symbol">XAUJPY</option>
+                                    <option value="XAUUSD" data-tokens="XAUUSDGold / US Dollar" data-subtext="Gold / US Dollar" is-tv-symbol="is-tv-symbol">XAUUSD</option>
+                                    <option value="XBRUSD" data-tokens="XBRUSDBrent Crude Oil, UKOIL" data-subtext="Brent Crude Oil, UKOIL" is-tv-symbol="is-tv-symbol">XBRUSD</option>
+                                    <option value="XEMUSD" data-tokens="XEMUSDNEM / US Dollar" data-subtext="NEM / US Dollar" is-tv-symbol="is-tv-symbol">XEMUSD</option>
+                                    <option value="XLMUSD" data-tokens="XLMUSDStellar / US Dollar" data-subtext="Stellar / US Dollar" is-tv-symbol="is-tv-symbol">XLMUSD</option>
+                                    <option value="XMRUSD" data-tokens="XMRUSDMonero / US Dollar" data-subtext="Monero / US Dollar" is-tv-symbol="is-tv-symbol">XMRUSD</option>
+                                    <option value="XNGUSD" data-tokens="XNGUSDNatural Gas vs. US Dollar" data-subtext="Natural Gas vs. US Dollar" is-tv-symbol="is-tv-symbol">XNGUSD</option>
+                                    <option value="XPDUSD" data-tokens="XPDUSDPalladium US Dollar" data-subtext="Palladium US Dollar" is-tv-symbol="is-tv-symbol">XPDUSD</option>
+                                    <option value="XPTUSD" data-tokens="XPTUSDCryptobuyer Token / US Dollar" data-subtext="Cryptobuyer Token / US Dollar" is-tv-symbol="is-tv-symbol">XPTUSD</option>
+                                    <option value="XRPUSD" data-tokens="XRPUSDXRP / US Dollar" data-subtext="XRP / US Dollar" is-tv-symbol="is-tv-symbol">XRPUSD</option>
+                                    <option value="XTIUSD" data-tokens="XTIUSDWTI West Texas Crude Oil, USOIL" data-subtext="WTI West Texas Crude Oil, USOIL" is-tv-symbol="is-tv-symbol">XTIUSD</option>
+                                    <option value="XTZUSD" data-tokens="XTZUSDTezos / US Dollar" data-subtext="Tezos / US Dollar" is-tv-symbol="is-tv-symbol">XTZUSD</option>
+                                    <option value="ZARJPY" data-tokens="ZARJPYSouth African Rand / Japanese Yen" data-subtext="South African Rand / Japanese Yen" is-tv-symbol="is-tv-symbol">ZARJPY</option>
+                                    <option value="ZECUSD" data-tokens="ZECUSDZcash / US Dollar" data-subtext="Zcash / US Dollar" is-tv-symbol="is-tv-symbol">ZECUSD</option>
+                            </select><button type="button" class="form-control dropdown-toggle frn-override widget-input-override" data-toggle="dropdown" role="combobox" aria-owns="bs-select-4" aria-haspopup="listbox" aria-expanded="false" data-id="pscSymbolsControlSelect" title="AAVEUSD" style="background: #15181d; color: #9194a1; border: solid 0px #9194a1;"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">AAVEUSD</div></div> </div></button><div class="dropdown-menu dropdown-menu-right" style="max-width: 980px !important;"><div class="bs-searchbox"><input type="text" class="form-control" autocomplete="off" role="combobox" aria-label="Search" aria-controls="bs-select-4" aria-autocomplete="list"></div><div class="inner show" role="listbox" id="bs-select-4" tabindex="-1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label for="pscCurrencySelect">Deposit currency</label>
+                            <div class="dropdown bootstrap-select form-control frn-override widget-input-override"><select name="pscCurrencySelect" class="selectpicker form-control frn-override widget-input-override" id="pscCurrencySelect" onchange="OnPSCCurrencyChanged()" data-size="6" data-style="form-control frn-override widget-input-override" tabindex="-98">
+                                    <option value="AUD" data-subtext="Australian Dollar">AUD</option>
+                                    <option value="BCH" data-subtext="Bitcoin Cash">BCH</option>
+                                    <option value="BTC" data-subtext="Bitcoin">BTC</option>
+                                    <option value="CAD" data-subtext="Canadian Dollar">CAD</option>
+                                    <option value="CHF" data-subtext="Swiss Franc">CHF</option>
+                                    <option value="CNH" data-subtext="Chinese Yuan">CNH</option>
+                                    <option value="CNY" data-subtext="Chinese Yuan">CNY</option>
+                                    <option value="CZK" data-subtext="Czech Koruna">CZK</option>
+                                    <option value="DKK" data-subtext="Danish Krone">DKK</option>
+                                    <option value="DOGE" data-subtext="Dogecoin">DOGE</option>
+                                    <option value="DSH" data-subtext="Dashcoin">DSH</option>
+                                    <option value="EOS" data-subtext="EOS">EOS</option>
+                                    <option value="ETH" data-subtext="Ethereum">ETH</option>
+                                    <option value="EUR" data-subtext="Euro">EUR</option>
+                                    <option value="GBP" data-subtext="British Pound">GBP</option>
+                                    <option value="HKD" data-subtext="Hong Kong Dollar">HKD</option>
+                                    <option value="HUF" data-subtext="Hungarian Forint">HUF</option>
+                                    <option value="ILS" data-subtext="Israeli New Shekel">ILS</option>
+                                    <option value="INR" data-subtext="Indian Rupee">INR</option>
+                                    <option value="JPY" data-subtext="Japanese Yen">JPY</option>
+                                    <option value="LTC" data-subtext="Litecoin">LTC</option>
+                                    <option value="MXN" data-subtext="Mexican Peso">MXN</option>
+                                    <option value="NOK" data-subtext="Norwegian Krone">NOK</option>
+                                    <option value="NZD" data-subtext="New Zealand Dollar">NZD</option>
+                                    <option value="PLN" data-subtext="Polish Zloty">PLN</option>
+                                    <option value="RON" data-subtext="Romanian Leu">RON</option>
+                                    <option value="RUB" data-subtext="Russian Ruble">RUB</option>
+                                    <option value="SEK" data-subtext="Swedish Krona">SEK</option>
+                                    <option value="SGD" data-subtext="Singapore Dollar">SGD</option>
+                                    <option value="THB" data-subtext="Thai Baht">THB</option>
+                                    <option value="TRY" data-subtext="Turkish Lira">TRY</option>
+                                    <option value="USD" data-subtext="US Dollar">USD</option>
+                                    <option value="XAG" data-subtext="Silver">XAG</option>
+                                    <option value="XAU" data-subtext="Gold">XAU</option>
+                                    <option value="XLM" data-subtext="Stellar">XLM</option>
+                                    <option value="XRP" data-subtext="XRP">XRP</option>
+                                    <option value="ZAR" data-subtext="South African Rand">ZAR</option>
+                            </select><button type="button" class="form-control dropdown-toggle frn-override widget-input-override" data-toggle="dropdown" role="combobox" aria-owns="bs-select-5" aria-haspopup="listbox" aria-expanded="false" data-id="pscCurrencySelect" title="USD" style="background: #15181d; color: #9194a1; border: solid 0px #9194a1;"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">USD</div></div> </div></button><div class="dropdown-menu dropdown-menu-right" style="max-width: 980px !important;"><div class="inner show" role="listbox" id="bs-select-5" tabindex="-1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+                        </div>
+                    </div>
+                    <div class="form-group" id="psc-open-price-price-field" style="display: block;">
+                        <div>
+                            <label for="psc-open-price">Open price</label>
+                            <div>
+                                <input type="text" class="form-control frn-override widget-input-override" id="psc-open-price" oninvalid="CustomValidateMessage(this)" oninput="CustomValidateMessage(this)" placeholder="" autocomplete="off" style="background: #15181d; color: #9194a1; border: solid 0px #9194a1;">
+                            </div>
+                        </div>
+                        <div class="invalid-feedback">
+                            You must enter a valid number
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <input type="hidden" id="psc-stop-loss-type" value="price">
+                            <label data-toggle="trade-size-popover" data-trigger="hover toggle" data-placement="top" data-html="true" data-target-id="stop-loss-popover-content-psc" for="PSCStopLoss" class="tools-underline" data-original-title="" title=""><i class="mdi mdi-settings font-12"></i>Stop loss price</label>
+                            <div>
+                                <input value="200" type="text" class="form-control frn-override widget-input-override" id="PSCStopLoss" oninvalid="CustomValidateMessage(this)" oninput="CustomValidateMessage(this)" placeholder="" required="" autocomplete="off" style="background: #15181d; color: #9194a1; border: solid 0px #9194a1;">
+                            </div>
+                        </div>
+                        <div class="invalid-feedback">
+                            You must enter a valid number
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div>
+                            <label for="PSCAccountBalance">Account Balance</label>
+                            <div>
+                                <input type="text" value="100000" class="form-control frn-override widget-input-override" id="PSCAccountBalance" oninvalid="CustomValidateMessage(this)" oninput="CustomValidateMessage(this)" placeholder="" required="" autocomplete="off" style="background: #15181d; color: #9194a1; border: solid 0px #9194a1;">
+                            </div>
+                        </div>
+                        <div class="invalid-feedback">
+                            You must enter a valid number
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="psc-current-pair-pip-size-form-group" style="display: none;">
+                        <div>
+                            <label title="This can vary by broker" id="pscCurrentPairPipSizeLabel" for="pscCurrentPairPipSize">AAVEUSD 1 Pip Size</label>
+                            <div>
+                                <input type="text" value="0.0001" class="form-control frn-override widget-input-override" id="pscCurrentPairPipSize" placeholder="" style="background: #15181d; color: #9194a1; border: solid 0px #9194a1;" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <label for="PSCRisk">Risk</label>
+                            <div class="d-flex flex-row">
+                                <input type="text" class="frn-override widget-input-override risk-input" id="PSCRisk" value="2" autocomplete="off" style="background: #15181d; color: #9194a1; border: solid 0px #9194a1;">
+                                <div class="selectdiv widget-input-override">
+                                    <select name="PSCRiskType" class="widget-input-override" id="pscRiskTypeSelect" onchange="OnPSCRiskTypeChanged()">
+                                        <option value="0">%</option>
+                                        <option id="psc-risk-type-currency" value="1">USD</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" id="psc-current-price-form-group" style="display:none;">
+                        <div>
+                            <label id="pscCurrentPriceLabel" for="pscCurrentPrice">USDUSD</label>&nbsp;<label>Price</label>
+                            <div>
+                                <input type="text" class="form-control frn-override widget-input-override" id="pscCurrentPrice" placeholder="" style="background: #15181d; color: #9194a1; border: solid 0px #9194a1;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group psc-contract-size active" id="psc-contract-size-form-group">
+                        <a id="psc-contract-size-link" href="javascript:void(0);" onclick="OnPSCContractSizeEnable()">Calculate lot size in MT4/MT5?</a>
+                        <div id="psc-contract-size-input">
+                            <label class="tools-underline" data-toggle="trade-size-popover" data-placement="top" data-trigger="hover toggle" data-html="true" data-target-id="psc-contract-size-popover-content" for="pscContractSize" data-original-title="" title="">Contract size (Units per Lot)</label>
+                            <div>
+                                <input type="text" class="form-control frn-override widget-input-override" id="pscContractSize" placeholder="100000" style="background: #15181d; color: #9194a1; border: solid 0px #9194a1;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="psc-widget-bottom-pane" class="w-100 d-flex  flex-column align-items-center bottom-panel widget-bottom-pane" style="background: #15181d; border: solid 0px #2a2e39; color: #9194a1;">
+            <div class="w-100 d-flex justify-content-center mt-4 mb-4 cal-button-container">
+                <a href="javascript:void(0)" onclick="CalculatePositionSize()" id="psc-calculate-button" class="calculate-button" style="background: #343540; color: white; border-radius: 20px;"><span>Calculate</span></a>
+            </div>
+            <div class="w-100 d-flex flex-row justify-content-center flex-wrap mb-2 widget-bottom-result-container">
+                <div id="psc-lots-result-group" class="d-flex flex-column align-items-center ml-3 mr-3 min-width-15">
+                    <span data-toggle="trade-size-popover" data-placement="top" data-trigger="hover toggle" data-html="true" data-target-id="psc-label-popover-content" class="result-title-span tools-underline" data-original-title="" title="">Lots</span>
+                    <span class="result-span" id="psc-lots"><a class="lots-question-mark" data-toggle="popover" data-trigger="hover toggle" data-placement="auto" data-html="true" data-content="Click to enter contract size (the number of units in one lot) and then click calculate to compute lot size" style="lot-size-question-mark" href="javascript:void(0);" onclick="OnLotsQuestionMarkClicked()" data-original-title="" title="">?</a></span>
+                </div>
+                <div class="d-flex flex-column align-items-center ml-3 mr-3 min-width-15">
+                    <span data-toggle="trade-size-popover" data-placement="top" data-trigger="hover toggle" data-html="true" data-target-id="psc-label-popover-content" class="result-title-span tools-underline" data-original-title="" title="">Units</span>
+                    <span class="result-span" id="psc-units">30.667</span>
+                </div>
+                <div class="d-flex flex-column align-items-center ml-3 mr-3 min-width-15">
+                    <span class="result-title-span" id="psc-risk-money-label">Money at risk</span>
+                    <span class="result-span" id="psc-moneyAtRisk">US$37.50</span>
+                </div>
+            </div>
+            
+        </div>
+        <div style="display:none" id="widget-slug" value="position-size-calculator"></div>
+    </form>
+    <div id="stop-loss-popover-content-psc" style="display: none;">
+        <a style="font-weight:bold;" id="psc-stop-loss-popover-link" href="javascript:void(0)" onclick="OnSwitchStopLossPopoverLink(this)">Switch to stop loss in pips</a>
+    </div>
+    <div id="psc-label-popover-content" style="display: none;">
+        <span>Forex pairs are 100,000 units per 1 lot</span>
+        <br><br>
+        <span>Units per 1 lot vary on non-forex pairs, please check with your broker</span>
+        <br><br>
+        <span>In MT4 and MT5 right click a symbol and then click Specification. The Contract Size field tells how many units are in one lot.</span>
+        <br>
+        <a style="font-weight:bold;" href="/Content/dist/images/PageElements/MT4ContractSizeSpecifications.png" data-toggle="lightbox-image" data-target-id="psc-trade-size-lightbox-image-holder" target="_blank">View image</a>
+    </div>
+    <div id="psc-contract-size-popover-content" style="display: none;">
+        <span>In MT4 and MT5 right click a symbol and then click Specification. The Contract Size field tells how many units are in one lot.</span>
+        <br>
+        <a style="font-weight:bold;" href="/Content/dist/images/PageElements/MT4ContractSizeSpecifications.png" data-toggle="lightbox-image" data-target-id="psc-trade-size-lightbox-image-holder" target="_blank">View image</a>
+    </div>
